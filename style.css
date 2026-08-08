@@ -1,0 +1,233 @@
+/* Google Fonts မှ Victorian Script Font ခေါ်ယူခြင်း (ဖိုင်၏ အပေါ်ဆုံးတွင် ထားပါ) */
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+/* Basic Layout Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fce4ec; /* ပန်းရောင်ဖျော့ နောက်ခံ */
+    padding: 20px;
+}
+
+/* Card Box */
+.question-card {
+    background-color: #fce4ec;
+    border: 2px solid #333; /* နက်မှောင်သော အနားသတ် border */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ပုံအပိုင်း */
+.image-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cat-gif {
+    max-width: 100%;
+    height: auto;
+}
+
+/* မေးခွန်းစာသား */
+.question-text {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ခလုတ်များအပိုင်း */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px 15px;
+    width: 100%;
+}
+
+/* အခြေခံ ခလုတ်စတိုင် */
+.btn {
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    min-width: 100px;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Yes ခလုတ် (ပန်းရောင်ရင့်) */
+.yes-btn {
+    background-color: #ff5e78;
+    color: white;
+}
+
+/* No ခလုတ် */
+.no-btn {
+    background-color: white;
+    color: #ff5e78;
+    border: 1px solid #ff5e78;
+}
+
+.no-btn:hover {
+    background-color: #fff0f3;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 480px) {
+    .question-card {
+        width: 100%;
+    }
+}
+/* ==========================================
+   PAGE LINKING & SECOND PAGE STYLES (ထပ်ဖြည့် CSS)
+   ========================================== */
+
+/* <a> tag ဖြင့် လင့်ခ်ချိတ်ထားသော ခလုတ်များ စာလုံးအောက်ကြောင်း မပါစေရန် */
+a.btn {
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* ဒုတိယ စာမျက်နှာရှိ Yes ခလုတ်ကို ပိုမို ထင်ရှားကြီးမားစေရန် */
+.yes-btn-large {
+    padding: 12px 45px; /* ဘေးဘက် အနားသတ်ကို ပိုကျယ်ပေးထားသည် */
+    font-size: 1.2rem;   /* စာလုံးအရွယ်အစားကို အနည်းငယ် တိုးပေးထားသည် */
+}
+/* ==========================================
+   PAGE 3: LETTERS SECTION STYLES
+   (style.css ဖိုင်၏ အောက်ဆုံးတွင် ထပ်ဖြည့်ပါ)
+   ========================================== */
+
+/* စာအိတ် ၃ ခုကို မျက်နှာပြင်တွင် ဘေးယှဉ်/ဒေါင်လိုက် ညီညီညာညာ စီပေးသော ကုတ် */
+.letters-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* စာအိတ် Card တစ်ခုချင်းစီ၏ ပုံစံ */
+.letter-card {
+    background-color: #ffffff;
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Checkbox ကို မျက်နှာပြင်တွင် မမြင်ရအောင် ဖျောက်ထားခြင်း */
+.env-toggle {
+    display: none;
+}
+
+/* စာအိတ် အစိတ်အပိုင်း */
+.envelope {
+    width: 100%;
+    text-align: center;
+}
+
+/* စာအိတ် Icon အရွယ်အစား */
+.envelope-icon {
+    font-size: 4rem;
+    transition: transform 0.3s ease;
+}
+
+/* စာအိတ်ထဲမှ စာစောင် (အစတွင် ဖျောက်ထားမည်) */
+.letter-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+    background-color: #fff0f3;
+    border-radius: 8px;
+    border: 1px dashed #ff5e78;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Read ခလုတ်ကို နှိပ်လိုက်သည့်အခါ စာအိတ် ပွင့်ပြီး စာစောင် ထွက်လာသည့် Animation */
+.env-toggle:checked + .envelope .letter-content {
+    max-height: 300px; /* စာပိုဒ်အရှည်အတွက် လုံလောက်သော အမြင့် */
+    opacity: 1;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+/* Read ခလုတ်နှိပ်ထားချိန် စာအိတ် Icon ပွင့်သွားသည့်ပုံစံပြောင်းခြင်း */
+.env-toggle:checked + .envelope .envelope-icon {
+    transform: scale(1.1);
+}
+
+/* Read Button စတိုင် */
+.read-btn {
+    background-color: #ff5e78;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 15px;
+}
+
+.read-btn:hover {
+    opacity: 0.9;
+}
+
+/* Victorian Title Style */
+.victorian-title {
+    text-align: center;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3rem;
+    color: #4a2c35; /* ခံ့ညားသော ပန်းနက်ရောင်/ညိုရင့်ရောင် */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile ဖုန်းများပေါ်တွင် စာလုံးအရွယ်အစား အလိုအလျောက် ညှိပေးခြင်း */
+@media screen and (max-width: 480px) {
+    .victorian-title {
+        font-size: 2.2rem;
+        margin-top: 15px;
+    }
+}
